@@ -226,9 +226,14 @@ function HomePage() {
               Hybrid and electric vehicles need workshops equipped and trained for high-voltage systems. T-CAT offers
               electric and hybrid vehicle repair and maintenance, and continues to build capability in this area.
             </p>
-            <ActionLink to="/services/$service" params={{ service: "electric-vehicle-service" }} variant="accent" className="mt-9">
+            <Link
+              to="/services/$service"
+              params={{ service: "electric-vehicle-service" }}
+              className={actionClasses("accent", "md", "mt-9")}
+            >
               Explore EV &amp; hybrid services
-            </ActionLink>
+            </Link>
+
           </div>
         </div>
       </section>
