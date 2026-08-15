@@ -1,10 +1,11 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Gauge, ClipboardCheck, BatteryCharging, MessagesSquare } from "lucide-react";
 import { Hero } from "@/components/home/hero";
 import { ServiceGrid } from "@/components/home/service-grid";
 import { Section, SectionHeading } from "@/components/tcat/sections";
-import { ActionLink, ActionAnchor } from "@/components/tcat/action";
+import { ActionLink, ActionAnchor, actionClasses } from "@/components/tcat/action";
 import { company, images, processSteps, services } from "@/data/site";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
