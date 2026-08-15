@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
+import { Route as WhyTcatRouteImport } from './routes/why-tcat'
 import { Route as ServicesIndexRouteImport } from './routes/services.index'
 import { Route as ServicesServiceRouteImport } from './routes/services.$service'
 
@@ -22,6 +23,11 @@ const IndexRoute = IndexRouteImport.update({
 const AboutRoute = AboutRouteImport.update({
   id: '/about',
   path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WhyTcatRoute = WhyTcatRouteImport.update({
+  id: '/why-tcat',
+  path: '/why-tcat',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ServicesIndexRoute = ServicesIndexRouteImport.update({
@@ -38,12 +44,14 @@ const ServicesServiceRoute = ServicesServiceRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/why-tcat': typeof WhyTcatRoute
   '/services/$service': typeof ServicesServiceRoute
   '/services/': typeof ServicesIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/why-tcat': typeof WhyTcatRoute
   '/services/$service': typeof ServicesServiceRoute
   '/services': typeof ServicesIndexRoute
 }
@@ -51,20 +59,28 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/why-tcat': typeof WhyTcatRoute
   '/services/$service': typeof ServicesServiceRoute
   '/services/': typeof ServicesIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/services/$service' | '/services/'
+  fullPaths: '/' | '/about' | '/why-tcat' | '/services/$service' | '/services/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/services/$service' | '/services'
-  id: '__root__' | '/' | '/about' | '/services/$service' | '/services/'
+  to: '/' | '/about' | '/why-tcat' | '/services/$service' | '/services'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/why-tcat'
+    | '/services/$service'
+    | '/services/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  WhyTcatRoute: typeof WhyTcatRoute
   ServicesServiceRoute: typeof ServicesServiceRoute
   ServicesIndexRoute: typeof ServicesIndexRoute
 }
@@ -83,6 +99,13 @@ declare module '@tanstack/react-router' {
       path: '/about'
       fullPath: '/about'
       preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/why-tcat': {
+      id: '/why-tcat'
+      path: '/why-tcat'
+      fullPath: '/why-tcat'
+      preLoaderRoute: typeof WhyTcatRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/services/': {
@@ -105,6 +128,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  WhyTcatRoute: WhyTcatRoute,
   ServicesServiceRoute: ServicesServiceRoute,
   ServicesIndexRoute: ServicesIndexRoute,
 }
