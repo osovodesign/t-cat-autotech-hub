@@ -1,10 +1,11 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Gauge, ClipboardCheck, BatteryCharging, MessagesSquare } from "lucide-react";
 import { Hero } from "@/components/home/hero";
 import { ServiceGrid } from "@/components/home/service-grid";
 import { Section, SectionHeading } from "@/components/tcat/sections";
-import { ActionLink, ActionAnchor } from "@/components/tcat/action";
+import { ActionLink, ActionAnchor, actionClasses } from "@/components/tcat/action";
 import { company, images, processSteps, services } from "@/data/site";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -226,9 +227,14 @@ function HomePage() {
               Hybrid and electric vehicles need workshops equipped and trained for high-voltage systems. T-CAT offers
               electric and hybrid vehicle repair and maintenance, and continues to build capability in this area.
             </p>
-            <ActionLink to="/services/$service" params={{ service: "electric-vehicle-service" }} variant="accent" className="mt-9">
+            <Link
+              to="/services/$service"
+              params={{ service: "electric-vehicle-service" }}
+              className={actionClasses("accent", "md", "mt-9")}
+            >
               Explore EV &amp; hybrid services
-            </ActionLink>
+            </Link>
+
           </div>
         </div>
       </section>
