@@ -222,11 +222,14 @@ function HomePage() {
       <section className="relative isolate overflow-hidden bg-ink text-ink-foreground">
         <img
           src={images.acService}
-          alt="Technician working on a vehicle system with specialist equipment"
-          className="absolute inset-0 h-full w-full object-cover opacity-25"
+          alt="Technician servicing a vehicle air conditioning system at T-CAT"
+          className="absolute inset-0 h-full w-full object-cover opacity-40"
           loading="lazy"
+          width={1600}
+          height={900}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/90 to-ink/50" aria-hidden="true" />
+        <div className="absolute inset-0 duotone-ink" aria-hidden="true" />
+
         <div className="relative mx-auto max-w-7xl px-5 py-24 lg:px-8 lg:py-28">
           <div className="max-w-2xl">
             <p className="eyebrow">Electric &amp; hybrid</p>
