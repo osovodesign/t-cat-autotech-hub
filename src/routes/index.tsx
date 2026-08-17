@@ -129,22 +129,29 @@ function HomePage() {
             <img
               src={images.technicians}
               alt="Two T-CAT technicians inspecting a vehicle engine bay"
-              className="col-span-2 h-72 w-full object-cover lg:h-96"
+              className="col-span-2 h-72 w-full rounded-md object-cover elevate lg:h-96"
               loading="lazy"
+              width={960}
+              height={640}
             />
             <img
               src={images.diagnostics}
               alt="T-CAT technician using diagnostic equipment on a vehicle"
-              className="h-44 w-full object-cover lg:h-56"
+              className="h-44 w-full rounded-md object-cover elevate lg:h-56"
               loading="lazy"
+              width={480}
+              height={320}
             />
             <img
               src={images.exteriorBays}
               alt="Service bays at the T-CAT workshop in Port Harcourt"
-              className="h-44 w-full object-cover lg:h-56"
+              className="mt-6 h-44 w-full rounded-md object-cover elevate lg:h-56"
               loading="lazy"
+              width={480}
+              height={320}
             />
           </div>
+
         </div>
       </Section>
 
