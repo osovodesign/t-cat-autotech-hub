@@ -309,7 +309,7 @@ function HomePage() {
 
       {/* Closing CTA */}
       <Section>
-        <div className="flex flex-col items-start justify-between gap-8 border border-border bg-background p-8 lg:flex-row lg:items-center lg:p-12">
+        <div className="flex flex-col items-start justify-between gap-8 rounded-md border border-border bg-card p-8 elevate lg:flex-row lg:items-center lg:p-12">
           <div className="max-w-xl">
             <h2 className="text-2xl font-bold sm:text-3xl">Book your vehicle in at Trans-Amadi</h2>
             <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
