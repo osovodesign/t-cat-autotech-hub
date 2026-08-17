@@ -259,20 +259,49 @@ function HomePage() {
           title="A better workshop experience starts with how the work is done."
           intro="Organised bays, proper equipment and a consistent routine are what make repair quality predictable rather than lucky."
         />
-        <div className="mt-12 grid gap-4 md:grid-cols-3">
+        <div className="mt-12 grid gap-5 md:grid-cols-3">
           <img
             src={images.exterior}
             alt="Front view of the T-CAT ph workshop on Trans-Amadi Industrial Layout"
-            className="h-64 w-full object-cover md:col-span-2 md:h-96"
+            className="h-64 w-full rounded-md object-cover elevate md:col-span-2 md:h-96"
             loading="lazy"
+            width={1200}
+            height={800}
           />
           <img
             src={images.office}
             alt="T-CAT service adviser working at the front office"
-            className="h-64 w-full object-cover md:h-96"
+            className="h-64 w-full rounded-md object-cover elevate md:h-96"
             loading="lazy"
+            width={600}
+            height={800}
+          />
+          <img
+            src={images.carwash}
+            alt="Vehicle being washed under the T-CAT car wash canopy"
+            className="h-56 w-full rounded-md object-cover elevate md:h-64"
+            loading="lazy"
+            width={600}
+            height={400}
+          />
+          <img
+            src={images.reception}
+            alt="T-CAT reception desk beneath the illuminated T-CAT ph sign"
+            className="h-56 w-full rounded-md object-cover elevate md:h-64"
+            loading="lazy"
+            width={600}
+            height={400}
+          />
+          <img
+            src={images.diagnostics}
+            alt="Diagnostic equipment connected to a customer vehicle at T-CAT"
+            className="h-56 w-full rounded-md object-cover elevate md:h-64"
+            loading="lazy"
+            width={600}
+            height={400}
           />
         </div>
+
         <ActionLink to="/gallery" variant="outline" className="mt-10">
           View gallery
         </ActionLink>
