@@ -180,9 +180,12 @@ function HomePage() {
           <img
             src={images.reception}
             alt="T-CAT front desk staff taking a customer call beneath the illuminated T-CAT ph sign"
-            className="h-80 w-full object-cover lg:h-[30rem]"
+            className="h-80 w-full rounded-md object-cover elevate lg:h-[30rem]"
             loading="lazy"
+            width={800}
+            height={960}
           />
+
           <div>
             <SectionHeading
               eyebrow="Customer experience"
