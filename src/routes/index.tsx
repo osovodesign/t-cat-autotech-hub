@@ -129,22 +129,29 @@ function HomePage() {
             <img
               src={images.technicians}
               alt="Two T-CAT technicians inspecting a vehicle engine bay"
-              className="col-span-2 h-72 w-full object-cover lg:h-96"
+              className="col-span-2 h-72 w-full rounded-md object-cover elevate lg:h-96"
               loading="lazy"
+              width={960}
+              height={640}
             />
             <img
               src={images.diagnostics}
               alt="T-CAT technician using diagnostic equipment on a vehicle"
-              className="h-44 w-full object-cover lg:h-56"
+              className="h-44 w-full rounded-md object-cover elevate lg:h-56"
               loading="lazy"
+              width={480}
+              height={320}
             />
             <img
               src={images.exteriorBays}
               alt="Service bays at the T-CAT workshop in Port Harcourt"
-              className="h-44 w-full object-cover lg:h-56"
+              className="mt-6 h-44 w-full rounded-md object-cover elevate lg:h-56"
               loading="lazy"
+              width={480}
+              height={320}
             />
           </div>
+
         </div>
       </Section>
 
@@ -173,9 +180,12 @@ function HomePage() {
           <img
             src={images.reception}
             alt="T-CAT front desk staff taking a customer call beneath the illuminated T-CAT ph sign"
-            className="h-80 w-full object-cover lg:h-[30rem]"
+            className="h-80 w-full rounded-md object-cover elevate lg:h-[30rem]"
             loading="lazy"
+            width={800}
+            height={960}
           />
+
           <div>
             <SectionHeading
               eyebrow="Customer experience"
@@ -212,11 +222,14 @@ function HomePage() {
       <section className="relative isolate overflow-hidden bg-ink text-ink-foreground">
         <img
           src={images.acService}
-          alt="Technician working on a vehicle system with specialist equipment"
-          className="absolute inset-0 h-full w-full object-cover opacity-25"
+          alt="Technician servicing a vehicle air conditioning system at T-CAT"
+          className="absolute inset-0 h-full w-full object-cover opacity-40"
           loading="lazy"
+          width={1600}
+          height={900}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/90 to-ink/50" aria-hidden="true" />
+        <div className="absolute inset-0 duotone-ink" aria-hidden="true" />
+
         <div className="relative mx-auto max-w-7xl px-5 py-24 lg:px-8 lg:py-28">
           <div className="max-w-2xl">
             <p className="eyebrow">Electric &amp; hybrid</p>
@@ -246,20 +259,49 @@ function HomePage() {
           title="A better workshop experience starts with how the work is done."
           intro="Organised bays, proper equipment and a consistent routine are what make repair quality predictable rather than lucky."
         />
-        <div className="mt-12 grid gap-4 md:grid-cols-3">
+        <div className="mt-12 grid gap-5 md:grid-cols-3">
           <img
             src={images.exterior}
             alt="Front view of the T-CAT ph workshop on Trans-Amadi Industrial Layout"
-            className="h-64 w-full object-cover md:col-span-2 md:h-96"
+            className="h-64 w-full rounded-md object-cover elevate md:col-span-2 md:h-96"
             loading="lazy"
+            width={1200}
+            height={800}
           />
           <img
             src={images.office}
             alt="T-CAT service adviser working at the front office"
-            className="h-64 w-full object-cover md:h-96"
+            className="h-64 w-full rounded-md object-cover elevate md:h-96"
             loading="lazy"
+            width={600}
+            height={800}
+          />
+          <img
+            src={images.carwash}
+            alt="Vehicle being washed under the T-CAT car wash canopy"
+            className="h-56 w-full rounded-md object-cover elevate md:h-64"
+            loading="lazy"
+            width={600}
+            height={400}
+          />
+          <img
+            src={images.reception}
+            alt="T-CAT reception desk beneath the illuminated T-CAT ph sign"
+            className="h-56 w-full rounded-md object-cover elevate md:h-64"
+            loading="lazy"
+            width={600}
+            height={400}
+          />
+          <img
+            src={images.diagnostics}
+            alt="Diagnostic equipment connected to a customer vehicle at T-CAT"
+            className="h-56 w-full rounded-md object-cover elevate md:h-64"
+            loading="lazy"
+            width={600}
+            height={400}
           />
         </div>
+
         <ActionLink to="/gallery" variant="outline" className="mt-10">
           View gallery
         </ActionLink>
@@ -267,7 +309,7 @@ function HomePage() {
 
       {/* Closing CTA */}
       <Section>
-        <div className="flex flex-col items-start justify-between gap-8 border border-border bg-background p-8 lg:flex-row lg:items-center lg:p-12">
+        <div className="flex flex-col items-start justify-between gap-8 rounded-md border border-border bg-card p-8 elevate lg:flex-row lg:items-center lg:p-12">
           <div className="max-w-xl">
             <h2 className="text-2xl font-bold sm:text-3xl">Book your vehicle in at Trans-Amadi</h2>
             <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
