@@ -13,8 +13,10 @@ export const Route = createFileRoute("/faq")({
           "Answers on warning lights, hybrid and EV servicing, booking, inspections and turnaround at T-CAT ph, Trans-Amadi, Port Harcourt.",
       },
       { property: "og:title", content: "T-CAT ph — Frequently Asked Questions" },
+      { property: "og:type", content: "website" },
       { property: "og:description", content: "Warning lights, EV and hybrid service, booking and inspections." },
       { property: "og:url", content: "/faq" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: "/faq" }],
     scripts: [

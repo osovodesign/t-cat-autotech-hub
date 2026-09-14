@@ -28,8 +28,13 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur">
       <div className="mx-auto grid max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-5 py-3 lg:px-8">
         <Link to="/" className="flex min-w-0 items-center gap-3" aria-label="T-CAT ph home">
-          <img src={images.logo} alt="T-CAT ph logo" className="h-11 w-auto shrink-0" width={110} height={44} />
-          <span className="sr-only">T-CAT ph — Thecheksons Autotech</span>
+          <img src={images.logo} alt="T-CAT ph logo" className="h-10 w-16 shrink-0 object-contain" width={128} height={64} />
+          <span className="hidden border-l border-border pl-3 sm:block">
+            <span className="block font-display text-sm font-bold tracking-[0.08em] text-foreground">T-CAT ph</span>
+            <span className="mt-0.5 block text-[0.6rem] font-semibold uppercase tracking-[0.14em] text-muted-foreground">
+              Thecheksons Autotech
+            </span>
+          </span>
         </Link>
 
         <nav className="hidden items-center gap-7 lg:flex" aria-label="Main">
