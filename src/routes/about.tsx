@@ -13,11 +13,13 @@ export const Route = createFileRoute("/about")({
           "T-CAT ph (Thecheksons Autotech) is an automotive repair and maintenance workshop on Trans-Amadi, Port Harcourt, serving all vehicle brands and trims.",
       },
       { property: "og:title", content: "About T-CAT ph — Thecheksons Autotech" },
+      { property: "og:type", content: "website" },
       {
         property: "og:description",
         content: "An automotive repair and maintenance workshop on Trans-Amadi, Port Harcourt.",
       },
       { property: "og:url", content: "/about" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: "/about" }],
   }),
@@ -72,20 +74,26 @@ function AboutPage() {
             <img
               src={images.office}
               alt="T-CAT service adviser at the front office desk"
-              className="h-64 w-full object-cover sm:col-span-2 lg:h-80"
+              className="aspect-[16/9] w-full object-cover sm:col-span-2 lg:h-80"
               loading="lazy"
+              width={960}
+              height={540}
             />
             <img
               src={images.technicians}
               alt="T-CAT technicians working on a vehicle"
-              className="h-52 w-full object-cover"
+              className="aspect-[4/3] w-full object-cover"
               loading="lazy"
+              width={640}
+              height={480}
             />
             <img
               src={images.carwash}
               alt="Vehicle being washed at the T-CAT car wash"
-              className="h-52 w-full object-cover"
+              className="aspect-[4/3] w-full object-cover"
               loading="lazy"
+              width={640}
+              height={480}
             />
           </div>
         </div>

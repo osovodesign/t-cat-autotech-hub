@@ -14,11 +14,13 @@ export const Route = createFileRoute("/services/")({
           "Engine diagnostics, vehicle inspection, oil and engine care, battery and electrical, brakes, general repair, EV and hybrid service in Port Harcourt.",
       },
       { property: "og:title", content: "T-CAT ph Services — Port Harcourt" },
+      { property: "og:type", content: "website" },
       {
         property: "og:description",
         content: "Diagnostics, servicing, electrical, brake, EV and hybrid vehicle service for all brands and trims.",
       },
       { property: "og:url", content: "/services" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: "/services" }],
   }),

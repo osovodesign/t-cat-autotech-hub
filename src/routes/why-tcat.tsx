@@ -13,11 +13,13 @@ export const Route = createFileRoute("/why-tcat")({
           "Accurate diagnosis, a defined workshop process, modern vehicle capability and clear communication — how T-CAT ph approaches vehicle repair in Port Harcourt.",
       },
       { property: "og:title", content: "Why T-CAT ph" },
+      { property: "og:type", content: "website" },
       {
         property: "og:description",
         content: "Diagnosis first, a defined process, and repairs explained in plain language.",
       },
       { property: "og:url", content: "/why-tcat" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: "/why-tcat" }],
   }),
@@ -87,8 +89,10 @@ function WhyPage() {
           <img
             src={images.reception}
             alt="T-CAT front desk staff handling a customer call"
-            className="h-80 w-full object-cover lg:h-[26rem]"
+            className="aspect-[4/3] w-full object-cover lg:h-[26rem]"
             loading="lazy"
+            width={960}
+            height={720}
           />
           <div>
             <SectionHeading

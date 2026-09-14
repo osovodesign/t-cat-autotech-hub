@@ -17,12 +17,14 @@ export const Route = createFileRoute("/")({
           "Professional diagnostics, servicing, electrical, hybrid and EV vehicle care for all brands and trims at T-CAT ph, Trans-Amadi, Port Harcourt.",
       },
       { property: "og:title", content: "T-CAT ph — Car Repair & Maintenance, Port Harcourt" },
+      { property: "og:type", content: "website" },
       {
         property: "og:description",
         content:
           "Diagnostics, servicing, electrical, hybrid and EV vehicle care for all brands and trims in Port Harcourt.",
       },
       { property: "og:url", content: "/" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: "/" }],
   }),
